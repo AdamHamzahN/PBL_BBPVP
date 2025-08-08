@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    margin: auto;
+    max-width: 90%;
+}
+
+main {
+    margin: 20px 30px;
+}
+
+.grid-main {
+    display: grid;
+    height: 70vh;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+        "about contact"
+        "about hobby";
+    gap: 10px;
+
+}
+
+.about {
+    grid-area: about;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.hobby {
+    grid-area: hobby;
+}
+
+.header,
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid navy;
+}
+
+.header{
+    /* background-image: url("foto.jpg"); */
+}
+
+.about,
+.contact,
+.hobby {
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    text-align: left;
+}
+
+.contact>ul {
+    list-style-type: none;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .grid-main {
+        height: auto;
+        display: block;
+        gap: 10px;
+    }
+}
